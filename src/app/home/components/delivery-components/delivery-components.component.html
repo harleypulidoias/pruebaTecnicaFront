@@ -1,0 +1,50 @@
+<p>delivery-components works!</p>
+
+<form [formGroup]="formAddress" (ngSubmit)="onSubmit()">
+  <h3>Direccion</h3>
+  <div class="flex flex-row container">
+    <div>
+      <label>Departamento:</label>
+      <select formControlName="departament" id="departament" class="border-2" >
+        <option value="">Seleccione una opcion..</option>
+        <option *ngFor="let departament of departaments" value="{{departament.id}}">{{departament.name}}</option>
+      </select>
+    </div>
+    <div class="flex flex-row">
+      <label>Principal:</label>
+      <select formControlName="streetOne" id="streetOne" class="border-2">
+        <option value="">Seleccione una opcion..</option>
+        <option value="Calle">Calle</option>
+        <option value="Carrera">Carrera</option>
+        <option value="Avenida">Avenida</option>
+        <option value="Transversal">Transversal</option>
+        <option value="Circular">Circular</option>
+        <option value="Diagonal">Diagonal</option>
+      </select>
+    </div>
+    <div class="flex flex-row">
+      <label>Numero:</label>
+      <input type="text" formControlName="numberrOne" class="border-2">
+    </div>
+    <div class="flex flex-row">
+      <label>Letra:</label>
+      <input type="text" formControlName="letterOne" class="border-2">
+    </div>
+    <div>
+      <p>#</p>
+    </div>
+    <div class="flex flex-row">
+      <label>Numero:</label>
+      <input type="text" formControlName="numberrTwo" class="border-2">
+    </div>
+    <div class="flex flex-row">
+      <label>Letra:</label>
+      <input type="text" formControlName="letterTwo" class="border-2">
+    </div>
+    <div class="flex flex-row">
+      <label>Casa:</label>
+      <input type="text" formControlName="house" class="border-2">
+    </div>
+  </div>
+  <button type="submit"  class="bg-lime-500 p-2 text-zinc-200">Submit</button>
+</form>

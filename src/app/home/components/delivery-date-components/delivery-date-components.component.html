@@ -1,0 +1,7 @@
+<p>delivery-date-components works!</p>
+
+<form [formGroup]="formDate" (ngSubmit)="onSubmit()">
+  <label for="fecha">Fecha y Hora:</label>
+  <input type="datetime-local" id="fecha"  formGroupName="date">
+  <button type="submit"  class="bg-lime-500 p-2 text-zinc-200">Submit</button>
+</form>
